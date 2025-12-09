@@ -1,83 +1,184 @@
+# NestJS Backend Game Store API
 <p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
+  <a href="https://brazil.generation.org/">
+    <img src="./.github/assets/generation-bg.png" width="150" alt="Generation Brasil"/>
+  </a>
+  <a href="http://nestjs.com/" target="blank">
+    <img src="https://nestjs.com/img/logo-small.svg" width="120" alt="NestJS"/>
+  </a>
 </p>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
-
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
+<p align="center">
+  <strong>API REST para gerenciamento de blog pessoal desenvolvida com NestJS</strong>
 </p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+<p align="center">
+  <img src="https://img.shields.io/badge/version-0.1.0-blue" alt="Versão">
+  <img src="https://img.shields.io/badge/node-%3E%3D18.0.0-green" alt="Node >= 18">
+  <img src="https://img.shields.io/badge/nestjs-10.0.0-red" alt="NestJS 10">
+  <img src="https://img.shields.io/badge/license-MIT-yellow" alt="MIT">
+</p>
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
-## Project setup
+API RESTful de uma loja de jogos desenvolvida com NestJS, TypeORM e MySQL.
 
+## 📋 Descrição
+
+Backend de uma aplicação de loja de jogos com funcionalidades de gerenciamento de categorias e produtos. A API implementa endpoints CRUD completos para manipulação de dados com validação e tratamento de erros.
+
+## 🚀 Tecnologias
+
+- **NestJS** - Framework Node.js progressivo
+- **TypeORM** - ORM para TypeScript
+- **MySQL** - Banco de dados relacional
+- **TypeScript** - Linguagem de programação
+- **Class Validator** - Validação de dados
+- **ESLint** - Linting de código
+- **Jest** - Framework de testes
+
+## 📦 Instalação
+
+1. Clone o repositório:
 ```bash
-$ npm install
+git clone <repository-url>
+cd nestjs-backend-game-store-api
 ```
 
-## Compile and run the project
-
+2. Instale as dependências:
 ```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
+npm install
 ```
 
-## Run tests
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+3. Configure as variáveis de ambiente criando um arquivo `.env` na raiz do projeto:
+```env
+DB_TYPE=mysql
+DB_HOST=localhost
+DB_PORT=3306
+DB_USERNAME=root
+DB_PASSWORD=sua_senha
+DB_DATABASE=game_store
+DB_SYNCHRONIZE=development
 ```
 
-## Deployment
+## 🏃 Como Executar
 
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
-
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
-
+### Desenvolvimento
 ```bash
-$ npm install -g @nestjs/mau
-$ mau deploy
+npm run start:dev
+```bash
+npm run test
+
+# Testes em modo watch
+npm run test:watch
+
+# Cobertura de testes
+npm run test:cov
 ```
 
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+## 📝 Linting e Formatação
 
-## Resources
+```bash
+# Executar ESLint
+npm run lint
 
-Check out a few resources that may come in handy when working with NestJS:
+# Formatar código com Prettier
+npm run format
+```
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
+## 📚 Módulos
+
+### Categoria Module
+Gerenciamento de categorias de produtos.
+
+**Endpoints:**
+- `GET /categorias` - Listar todas as categorias
+- `GET /categorias/:id` - Obter categoria por ID
+- `GET /categorias/descricao/:descricao` - Buscar categorias por descrição
+- `POST /categorias` - Criar nova categoria
+- `PUT /categorias` - Atualizar categoria
+- `DELETE /categorias/:id` - Deletar categoria
+
+### Produto Module
+Gerenciamento de produtos da loja.
+
+**Endpoints:**
+- `GET /produtos` - Listar todos os produtos
+- `GET /produtos/:id` - Obter produto por ID
+- `GET /produtos/nome/:nome` - Buscar produtos por nome
+- `POST /produtos` - Criar novo produto
+- `PUT /produtos` - Atualizar produto
+- `DELETE /produtos/:id` - Deletar produto
+
+## 📊 Estrutura do Projeto
+
+```
+src/
+├── app.module.ts           # Módulo principal da aplicação
+├── main.ts                 # Arquivo de inicialização
+├── categoria/              # Módulo de Categorias
+│   ├── categoria.module.ts
+│   ├── controllers/
+│   │   └── categoria.controller.ts
+│   ├── services/
+│   │   └── categoria.service.ts
+│   └── entities/
+│       └── categoria.entity.ts
+└── produto/                # Módulo de Produtos
+    ├── produto.module.ts
+    ├── controllers/
+    │   └── produto.controller.ts
+    ├── services/
+    │   └── produto.services.ts
+    └── entities/
+        └── produto.entity.ts
+```
+
+## 🔄 Relacionamentos
+
+- **Categoria ↔ Produto**: One-to-Many
+  - Uma categoria pode ter múltiplos produtos
+  - Um produto pertence a uma categoria
+  - Delete em cascade: ao deletar uma categoria, seus produtos são deletados
+
+## 🛠️ Configuração do Banco de Dados
+
+O TypeORM sincroniza automaticamente as entidades com o banco de dados em ambiente de desenvolvimento. Para sincronizar as tabelas:
+
+```typescript
+synchronize: process.env.DB_SYNCHRONIZE === 'development'
+```
+
+As tabelas criadas:
+- `tb_categorias` - Tabela de categorias
+- `tb_produtos` - Tabela de produtos
+
+## ✨ Funcionalidades
+
+- ✅ CRUD completo para Categorias e Produtos
+- ✅ Busca por nome/descrição com ILIKE (case-insensitive)
+- ✅ Validação de dados com Class Validator
+- ✅ Tratamento de erros HTTP apropriados
+- ✅ Relacionamento bidirecional Categoria-Produto
+- ✅ Delete em cascade
+- ✅ Type hints completos
+- ✅ Decorators de rota com status codes apropriados
+
+## 👤 Autor
+
+**Assis Pires Neto**
+
+## 📄 Licença
+
+UNLICENSED
+
+## 🤝 Contribuindo
+
+1. Faça um Fork do projeto
+2. Crie uma branch para sua feature (`git checkout -b feature/nova-feature`)
+3. Commit suas mudanças (`git commit -m 'feat: adiciona nova feature'`)
+4. Push para a branch (`git push origin feature/nova-feature`)
+5. Abra um Pull Request
+
 - Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
 - Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
 - To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
