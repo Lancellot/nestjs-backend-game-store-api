@@ -4,6 +4,7 @@ import { Produto } from "../entities/produto.entity";
 import { Categoria } from "../../categoria/entities/categoria.entity";
 import { InjectRepository } from "@nestjs/typeorm";
 import { CategoriaService } from "../../categoria/services/categoria.service";
+import { DeleteResult } from "typeorm/browser";
 
 @Injectable()
 export class ProdutoServices {
@@ -58,5 +59,10 @@ export class ProdutoServices {
         await this.categoriaService.findById(produto.categoria.id);
 
         return this.produtoRepository.save(produto);
+    }
+
+    async delete(id: number): Promise<DeleteResult> {
+        await this.findById(id);
+        return await this.produtoRepository.delete(id);
     }
 }

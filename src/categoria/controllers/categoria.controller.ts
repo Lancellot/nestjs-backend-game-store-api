@@ -9,7 +9,7 @@ import {
 } from "@nestjs/common";
 import { CategoriaService } from "../services/categoria.service";
 
-@Controller('/categoria')
+@Controller('/categorias')
 export class CategoriaController {
     constructor(
         private readonly categoriaService: CategoriaService
