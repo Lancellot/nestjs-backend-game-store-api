@@ -10,5 +10,5 @@ export class Categoria {
     @Column({ length: 100, nullable: false })
     descricao: string;
 
-    
+    produto: any[];
 }
