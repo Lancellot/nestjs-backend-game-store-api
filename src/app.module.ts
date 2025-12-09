@@ -1,5 +1,7 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { CategoriaModule } from './categoria/categoria.module';
+import { ProdutoModule } from './produto/produto.module';
 
 
 @Module({
@@ -13,7 +15,9 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       database: process.env.DB_DATABASE,
       entities: [],
       synchronize: process.env.DB_SYNCHRONIZE === 'development',
-    })
+    }),
+    ProdutoModule,
+    CategoriaModule,
   ],
   controllers: [],
   providers: [],
