@@ -1,8 +1,8 @@
 {
-  "name": "",
+  "name": "nestjs-backend-game-store-api",
   "version": "0.0.1",
   "description": "",
-  "author": "",
+  "author": "Assis Pires Neto",
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
