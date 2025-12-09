@@ -15,6 +15,10 @@ export class CategoriaController {
         return this.categoriaService.findById(id);
     }
 
+    findByDescricao(descricao: string) {
+        return this.categoriaService.findByDescricao(descricao);
+    }
+
     create(categoria: any) {
         return this.categoriaService.create(categoria);
     }
